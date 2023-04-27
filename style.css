@@ -1,0 +1,109 @@
+body{
+    background-color: #333;
+}
+.container{
+    position: relative;
+    isolation: isolate;
+    width: 30rem;
+    padding: 10rem 10px;
+    color: #fff;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1px 1rem rgba(230, 229, 229, 0.5);
+    top: 6rem;
+    left: 33rem;
+}
+.container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 8rem;
+    background-color: #6600ec;
+    border-radius: 1rem 1rem 100% 100%;
+}
+.titulo{
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+}
+.form{
+    position: relative;
+    top: 3.5rem;
+    border-radius: 10px 10px;
+    padding: 2.5rem;
+    background-color: #f3f3f3;
+}
+.formGroup{
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    margin-inline: auto;
+}
+.formIcon{
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #6600ec;
+}
+.formInput{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding-block: 1rem;
+}
+.email{
+    display: block;
+}
+.formBar{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(81, 25, 211, 0.3);
+    width: 100%;
+    height: 3px;
+}
+.formBar::before{
+    content: '';
+    position: absolute;
+    background-color: #6600ec;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+.formInput:focus + .formBar::before,
+.formInput:valid + .formBar::before{
+    transform: scaleX(1);
+}
+
+.formButton{
+    display: flex;
+    margin: 1.5rem auto 1.5rem;
+    padding: .7rem 2.5rem;
+    background-color: #6600ec;
+    color: #fff;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 2px solid #333;
+}
+.formButton:hover{
+    background-color: #5300ec;
+}
+footer{
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    top: 2.6rem;
+    left: 33rem;
+    width: 31.6%;
+    border-radius: 0px 0px 10px 10px;
+    background-color:  #333;
+    height: 1rem;
+}
